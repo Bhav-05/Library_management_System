@@ -1,0 +1,4 @@
+BookID,ISBN,Title,Author,TotalCopies,AvailableCopies
+1,9780140449136,The Odyssey,Homer,3,3
+2,9780262033848,Introduction to Algorithms,CLRS,2,2
+3,9780321573513,Computer Networks,Andrew S. Tanenbaum,1,1123,abc,abc,2,2

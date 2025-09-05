@@ -1,0 +1,3 @@
+MemberID,Name,Email,PasswordHash,Role
+1,Alice Admin,admin@example.com,$2b$12$cZTGev6tfSNqwY81kcl/0OEJYVunQZUKWPmISkq6e0YaS3Mpr845G,librarian
+2,Bob Member,bob@example.com,$2b$12$XTiGMDXQ8/HvwEqQasUGC.F6KplpVH7zd9MW/xPZjcsIkkaUWIfPK,member

@@ -1,0 +1,2 @@
+LoanID,BookID,MemberID,IssueDate,DueDate,ReturnDate
+1,1,2,2025-08-01,2025-08-15,
