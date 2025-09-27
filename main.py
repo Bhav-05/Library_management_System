@@ -14,19 +14,19 @@ def guest_menu():
             email = input("Email: ")
             password = input("Password: ")
             utils.register_member(name, email, password, role="member")
-            print("✅ Registered successfully.")
+            print(" Registered successfully.")
         elif choice == "2":
             email = input("Email: ")
             password = input("Password: ")
             user = utils.login(email, password)
             if user:
-                print(f"✅ Welcome, {user['Name']} ({user['Role']})")
+                print(f" Welcome, {user['Name']} ({user['Role']})")
                 if user["Role"] == "librarian":
                     librarian_menu(user)
                 else:
                     member_menu(user)
             else:
-                print("❌ Invalid login.")
+                print(" Invalid login.")
         elif choice == "3":
             term = input("Enter search term: ")
             books = utils.find_books_by_term(term)
@@ -39,7 +39,7 @@ def guest_menu():
             print("Exiting...")
             break
         else:
-            print("❌ Invalid choice")
+            print(" Invalid choice")
 
 def member_menu(user):
     while True:
@@ -61,20 +61,20 @@ def member_menu(user):
         elif choice == "2":
             isbn = input("Enter ISBN to borrow: ")
             if utils.issue_book(isbn, user["MemberID"]):
-                print("✅ Book borrowed.")
+                print(" Book borrowed.")
             else:
-                print("❌ Book not available.")
+                print(" Book not available.")
         elif choice == "3":
             loan_id = input("Enter LoanID to return: ")
             if utils.return_book(loan_id):
-                print("✅ Book returned.")
+                print(" Book returned.")
             else:
-                print("❌ Invalid LoanID.")
+                print(" Invalid LoanID.")
         elif choice == "0":
             print("Logging out...")
             break
         else:
-            print("❌ Invalid choice")
+            print(" Invalid choice")
 
 def librarian_menu(user):
     while True:
@@ -91,13 +91,13 @@ def librarian_menu(user):
             author = input("Author: ")
             copies = int(input("Copies: "))
             utils.add_book(isbn, title, author, copies)
-            print("✅ Book added.")
+            print(" Book added.")
         elif choice == "2":
             name = input("Name: ")
             email = input("Email: ")
             password = input("Password: ")
             utils.register_member(name, email, password, role="member")
-            print("✅ Member registered.")
+            print(" Member registered.")
         elif choice == "3":
             overdue = utils.overdue_loans()
             if overdue:
@@ -109,7 +109,7 @@ def librarian_menu(user):
             print("Logging out...")
             break
         else:
-            print("❌ Invalid choice")
+            print(" Invalid choice")
 
 if __name__ == "__main__":
     guest_menu()
